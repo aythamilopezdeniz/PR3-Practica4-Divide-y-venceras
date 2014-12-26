@@ -172,4 +172,4 @@ public class MainFrame extends JFrame implements OrdenarVector {
         else
             menoresQue(vector, umbral,linf,vd.getFinalPointer());
     }
-}
+} 

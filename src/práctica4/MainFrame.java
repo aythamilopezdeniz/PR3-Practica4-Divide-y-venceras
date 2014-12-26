@@ -85,13 +85,26 @@ public class MainFrame extends JFrame implements OrdenarVector {
                 vector=obtenerVector(vectorString.getText());
                 int numeroUmbral=comprobarUmbral(umbral.getText());
                 try {
-                    menoresQue(vector, tamaño, numeroUmbral, vector.length);
+                    menoresQue(vector, numeroUmbral, 0, vector.length);
                 } catch (Exception ex) {
                 }
                 int p=Arrays.binarySearch(vector, 0,vector.length,numeroUmbral);
                 int[]array2=Arrays.copyOfRange(vector, 0, p+1);
                 VectorSorter vs=new VectorSorter(array2);
-                vs.sort();
+                try{
+                    vs.sort();
+                }catch(Exception ex){
+                    resultado.setText("Vector pequeño");
+                }
+                vector=vs.getVector();
+                String result="";
+                for(int i=vector.length-1;i>=0;i--){
+                    if(i==0)
+                        result+=vector[i];
+                    else
+                        result+=vector[i]+",";
+                }
+                resultado.setText(result);
             }
         });
         return calcular;

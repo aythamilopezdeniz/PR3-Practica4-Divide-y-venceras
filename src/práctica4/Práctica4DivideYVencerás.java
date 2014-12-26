@@ -9,8 +9,8 @@ public class Práctica4DivideYVencerás {
             vec[i]=GeneraCaso.generaVector(v[i], true);
             CompruebaCaso.compruebaVector(vec[i], v[i]);
         }*/
-        //ConsoleMain();
-        UserInterface();
+        ConsoleMain();
+        //UserInterface();
     }
 
     private static void ConsoleMain() throws Exception {

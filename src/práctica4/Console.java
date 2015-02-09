@@ -18,6 +18,11 @@ public class Console implements OrdenarVector {
         int[]array2=Arrays.copyOfRange(vector, 0, p+1);
         VectorSorter vs=new VectorSorter(array2);
         vs.sort();
+        /*int[] vector={2,7,9,8,3,4,15,32,4,5,4,3};
+        menoresQue(vector,15,0,vector.length);
+        int p=Arrays.binarySearch(vector, 0,vector.length,15);
+        int[]array2=Arrays.copyOfRange(vector, 0, p+1);
+        VectorSorter vs=new VectorSorter(array2);*/
         vector=vs.getVector();
         for(int i=vector.length-1;i>=0;i--){
             if(i==0)
